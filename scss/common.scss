@@ -1,17 +1,31 @@
-$font-stack-body: "Bitter", Times,"Times New Roman", serif;
+$font-stack-body: "Bitter", serif;
+$font-stack-heading: "Arvo", serif;
+$font-stack-fancy: "Alex Brush", handwriting;
 
 $gunmetal: #292E37;
+$gunmetal-light: color($gunmetal l(85%));
 
 /* http://www.colourlovers.com/palette/4315482/do_you_mind */
 $orangina: #F7771B;
+$orangina-light: color($orangina l(85%));
+
 $rain: #C5CED1;
+$rain-light: color($rain l(85%));
+$rain-lighter: color($rain l(90%));
+$rain-lightest: color($rain l(95%));
+
 $blueturistic: #3E6470;
+
 $suave: #C6ECF7;
+$suave-light: color($suave l(85%));
+$suave-lighter: color($suave l(90%));
+$suave-lightest: color($suave l(95%));
+
 $lacera: #0B495C;
 
 %link {
   font-family: $font-stack-body;
   color: $gunmetal;
   text-decoration: none;    
-  border-bottom: 4px $suave solid;
+  border-bottom: 3px $suave-light solid;
 }

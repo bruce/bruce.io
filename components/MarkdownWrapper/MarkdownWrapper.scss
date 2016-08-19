@@ -1,9 +1,20 @@
 @import '../../scss/common.scss';
 
-$font-size: 15px;
-$baseline: calc($font-size * 1.5);
+$font-size: 17px;
+$baseline: calc($font-size * 1.65);
 
 .root {
+
+  h2, h3, h4 {
+    font-family: $font-stack-heading;
+    font-weight: 400;
+  }
+
+  
+  a,
+  a:visited {
+    @extend %link;
+  }  
 
   article {
     box-shadow: 0 0 4px $rain;
@@ -19,17 +30,37 @@ $baseline: calc($font-size * 1.5);
       line-height: $baseline;
     }
 
-    a,
-    a:visited {
-      @extend %link;
+    code {
+      border: none;
+      color: $lacera;
+      background: $suave-lightest;
+    }
+
+    strong {
+      font-weight: 700;
     }
 
     blockquote {
-      font-size: $font-size;
       line-height: calc($baseline * 2);
-      background-color: color($rain l(90%));
-      padding: 10px 20px;
+      padding: 10px 20px 10px 20px;
+      color: $lacera;;
+      font-style: italic;
       margin: 0 0 20px;
+      position: relative;
+      border-top: 1px $rain-lightest solid;
+      border-bottom: 1px $rain-lightest solid;
+      p {
+        font-size: calc($font-size * 1.1);
+      }
+      &:before {
+        content: "\201C";
+        font-size: 40px;
+        font-style: normal;
+        color: $orangina;
+        position: absolute;
+        top: 8px;
+        left: 0;
+      }
     }
 
     .articleHeader {
@@ -37,7 +68,10 @@ $baseline: calc($font-size * 1.5);
       h1 {
         padding: 0;
         margin: 0;
-        color: $lacera;
+        font-size: 40px;
+        font-family: $font-stack-heading;
+        font-weight: 300;
+        color: #000;
       }
     }
 
@@ -47,6 +81,15 @@ $baseline: calc($font-size * 1.5);
       font-size: $font-size;
       line-height: $baseline;
       border-top: 1px $rain dashed;
+      display: flex;
+      span {
+        display: inline-block;
+        flex: 2;
+      }
+      .tags {
+        flex: 4;
+        text-align: right;
+      }
     }
 
     .content {

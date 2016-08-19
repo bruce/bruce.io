@@ -35,10 +35,10 @@ $drop-cap-font-size: calc($baseline * 2);
     color: $fg;
     &.written {
       &:first-letter {
-        font-family: 'Rochester', cursive;
+        font-family: $font-stack-fancy;
         line-height: $drop-cap-font-size;
         float: left;
-        padding: 0 6px 0 0;
+        padding: 0 10px 0 0;
         margin: 0;
         font-size: $drop-cap-font-size;
         color: $drop-cap-color;

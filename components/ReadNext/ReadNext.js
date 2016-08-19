@@ -32,7 +32,7 @@ class ReadNext extends React.Component {
             <h1>Read this next</h1>
           </header>
           <h3>
-            <Link
+          <Link
               to={{
                 pathname: prefixLink(nextPost.path),
                 query: {
