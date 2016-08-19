@@ -17,7 +17,8 @@ $baseline: calc($font-size * 1.65);
   }  
 
   article {
-    box-shadow: 0 0 4px $rain;
+    background-color: #fff;
+    box-shadow: 0 0 8px $rain;
     font-family: $font-stack-body;
 
     p {

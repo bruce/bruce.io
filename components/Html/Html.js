@@ -25,7 +25,9 @@ class Html extends Component {
 
     const bodyStyle = {
       margin: 0,
-      padding: 0
+      padding: 0,
+      paddingBottom: '20px',
+      backgroundColor: '#f1f3f4'
     };
 
     return (
