@@ -1,0 +1,59 @@
+@import '../../scss/common.scss';
+
+$font-size: 15px;
+$baseline: calc($font-size * 1.5);
+
+.root {
+
+  article {
+    box-shadow: 0 0 4px $rain;
+    font-family: $font-stack-body;
+
+    p {
+      font-size: $font-size;
+      line-height: $baseline;
+    }
+
+    li {
+      font-size: $font-size;
+      line-height: $baseline;
+    }
+
+    a,
+    a:visited {
+      @extend %link;
+    }
+
+    blockquote {
+      font-size: $font-size;
+      line-height: calc($baseline * 2);
+      background-color: color($rain l(90%));
+      padding: 10px 20px;
+      margin: 0 0 20px;
+    }
+
+    .articleHeader {
+      padding: 20px;
+      h1 {
+        padding: 0;
+        margin: 0;
+        color: $lacera;
+      }
+    }
+
+    .meta {
+      padding: 20px;
+      color: $gunmetal;
+      font-size: $font-size;
+      line-height: $baseline;
+      border-top: 1px $rain dashed;
+    }
+
+    .content {
+      padding: 0 20px 0;
+    }
+    
+  }
+  
+}
+

@@ -19,28 +19,26 @@ class Template extends React.Component {
     let header;
     let pageType;
     if (location.pathname === prefixLink('/')) {
-      header = null;
-      pageType = 'index';
-    } else {
-      header = (
-        <header className={s.postHeader}>
-          <h1>
-            <Link to={prefixLink('/')}>
-              {config.blogTitle}
-            </Link>
-          </h1>
-        </header>
+      return (
+        <div className={classnames(s.root, s.index)}>
+          {children}
+        </div>
       );
-      pageType = 'post';
+    } else {
+      return (
+        <div className={classnames(s.root, s.post)}>
+          <header className={s.postHeader}>
+            <h1>
+              <Link to={prefixLink('/')}>
+                {config.blogTitle}
+              </Link>
+            </h1>
+          </header>
+          <div className={s.content}>{children}</div>
+        </div>
+      );
     }
-    return (
-      <div className={classnames(s.root, s[pageType])}>
-        {header}
-        {children}
-      </div>
-    );
   }
 }
-
 
 export default Template;
