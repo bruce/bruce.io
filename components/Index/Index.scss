@@ -1,0 +1,47 @@
+@import '../../scss/common.scss';
+
+$font-size: 15px;
+$baseline: calc($font-size * 2);
+
+.root {
+  ul {
+    margin: 0 0 0 120px;
+    padding: 0 0 0 60px;
+    list-style: none;
+  }
+  .link {
+    font-family: $font-stack-body;
+    font-size: $font-size;
+    line-height: $baseline;
+    text-decoration: none;
+    color: $gunmetal;
+  }
+}
+
+.item {
+  position: relative;
+  &:hover {
+    &:before {
+      position :absolute;
+      top: 8px;
+      left: -20px;
+      width: 10px;
+      height: 10px;
+      content: ' ';
+      display: inline-block;
+      border-radius: 15px;
+      background-color: $orangina;
+    }
+    .title {
+      font-weight: 600;
+    }
+  }
+}
+
+.date {
+  display: inline-block;
+}
+.title {
+  margin: 0 0 0 20px;
+  @extend %link;
+}

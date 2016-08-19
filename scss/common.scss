@@ -1,0 +1,17 @@
+$font-stack-body: "Bitter", Times,"Times New Roman", serif;
+
+$gunmetal: #292E37;
+
+/* http://www.colourlovers.com/palette/4315482/do_you_mind */
+$orangina: #F7771B;
+$rain: #C5CED1;
+$blueturistic: #3E6470;
+$suave: #C6ECF7;
+$lacera: #0B495C;
+
+%link {
+  font-family: $font-stack-body;
+  color: $gunmetal;
+  text-decoration: none;    
+  border-bottom: 4px $suave solid;
+}

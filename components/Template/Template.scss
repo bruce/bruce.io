@@ -1,0 +1,20 @@
+@import '../../scss/common.scss';
+
+.postHeader {
+  h1 {
+    font-family: $font-stack-body;
+    a,
+    a:visited {
+      text-decoration: none;
+      color: $lacera;
+      &:hover {
+        border-bottom: 4px $suave solid;
+      }
+    }
+  }
+}
+
+.root {
+  margin: 0 auto;
+  max-width: 960px; 
+}
